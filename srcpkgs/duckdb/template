@@ -1,0 +1,18 @@
+# Template file for 'duckdb'
+pkgname=duckdb
+version=0.10.3
+revision=1
+build_style=cmake
+short_desc="In-process analytical database system."
+maintainer="Lina <61861965+l1na-forever@users.noreply.github.com>"
+license="MIT"
+homepage="https://github.com/duckdb/duckdb"
+distfiles="https://github.com/duckdb/${pkgname}/archive/v${version}.tar.gz"
+checksum=7855587b3491dd488993287caee28720bee43ae28e92e8f41ea4631e9afcbf88
+
+make_check_pre="GEN=ninja"
+
+post_install() {
+	vlicense LICENSE
+}
+
